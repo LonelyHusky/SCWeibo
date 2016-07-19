@@ -14,11 +14,13 @@ class SCMainViewController: UITabBarController {
         super.viewDidLoad()
         
         let tabBar = SCTabBar()
-//        self.tabBar = tabBar  
-        self.setValue(tabBar, forKey: "tabBar")
+        tabBar.shDelegate = self
         
-        
-        
+        tabBar.closure = {
+            print("按钮点击啦")
+        }
+        setValue(tabBar, forKey: "tabBar")
+      
         addChildViewController(SCHomeViewController(), imgeNamed: "tabbar_home", title: "首页")
         addChildViewController(SCDiscoverViewController(), imgeNamed: "tabbar_discover", title: "发现")
         addChildViewController(SCMessageViewController(), imgeNamed: "tabbar_message_center", title: "消息")
@@ -33,7 +35,7 @@ class SCMainViewController: UITabBarController {
     /*
      
     */
-    private func addChildViewController(childController: UIViewController,imgeNamed:String,title : String) {
+     func addChildViewController(childController: UIViewController,imgeNamed:String,title : String) {
         
         self.tabBar.tintColor = UIColor.orangeColor()
 //     同时设置tabBar和导航栏标题
@@ -47,10 +49,12 @@ class SCMainViewController: UITabBarController {
     }
     
 }
-
-
-
-
+// MARK: - SHTabBarDelegate
+extension SCMainViewController: SCTabBarDelegate {
+    func composeButtonClick() {
+        print("撰写按钮点击了")
+    }
+}
 
 
 
