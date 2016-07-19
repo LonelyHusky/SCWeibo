@@ -15,6 +15,7 @@
 		52C6AA8F1D3E491900276046 /* SCDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6AA8E1D3E491900276046 /* SCDiscoverViewController.swift */; };
 		52C6AA911D3E492200276046 /* SCMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6AA901D3E492200276046 /* SCMessageViewController.swift */; };
 		52C6AA931D3E492B00276046 /* SCProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6AA921D3E492B00276046 /* SCProfileViewController.swift */; };
+		52C6AA951D3E61B200276046 /* SCTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6AA941D3E61B200276046 /* SCTabBar.swift */; };
 		FB195407E235E358B31D941B /* Pods_SCWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1B4314321972EEC5E2A158 /* Pods_SCWeibo.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		52C6AA8E1D3E491900276046 /* SCDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCDiscoverViewController.swift; sourceTree = "<group>"; };
 		52C6AA901D3E492200276046 /* SCMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCMessageViewController.swift; sourceTree = "<group>"; };
 		52C6AA921D3E492B00276046 /* SCProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCProfileViewController.swift; sourceTree = "<group>"; };
+		52C6AA941D3E61B200276046 /* SCTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCTabBar.swift; sourceTree = "<group>"; };
 		713E3B72B9ACF4F1E1630B26 /* Pods-SCWeibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCWeibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SCWeibo/Pods-SCWeibo.release.xcconfig"; sourceTree = "<group>"; };
 		9D3B0085B27F3C2A3ACBEBFD /* Pods-SCWeibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCWeibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SCWeibo/Pods-SCWeibo.debug.xcconfig"; sourceTree = "<group>"; };
 		AF1B4314321972EEC5E2A158 /* Pods_SCWeibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SCWeibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				52C6AA8A1D3E3E9700276046 /* SCMainViewController.swift */,
+				52C6AA941D3E61B200276046 /* SCTabBar.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			files = (
 				52C6AA931D3E492B00276046 /* SCProfileViewController.swift in Sources */,
 				527DDDF41D3E372900D90218 /* AppDelegate.swift in Sources */,
+				52C6AA951D3E61B200276046 /* SCTabBar.swift in Sources */,
 				52C6AA8F1D3E491900276046 /* SCDiscoverViewController.swift in Sources */,
 				52C6AA8B1D3E3E9700276046 /* SCMainViewController.swift in Sources */,
 				52C6AA8D1D3E490D00276046 /* SCHomeViewController.swift in Sources */,

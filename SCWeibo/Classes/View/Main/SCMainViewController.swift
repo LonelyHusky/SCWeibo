@@ -13,28 +13,34 @@ class SCMainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tabBar = SCTabBar()
+//        self.tabBar = tabBar  
+        self.setValue(tabBar, forKey: "tabBar")
+        
+        
+        
         addChildViewController(SCHomeViewController(), imgeNamed: "tabbar_home", title: "首页")
         addChildViewController(SCDiscoverViewController(), imgeNamed: "tabbar_discover", title: "发现")
         addChildViewController(SCMessageViewController(), imgeNamed: "tabbar_message_center", title: "消息")
         addChildViewController(SCProfileViewController(), imgeNamed: "tabbar_profile", title: "我")
 
       
+    
         
     }
     
     
     /*
+     
     */
     private func addChildViewController(childController: UIViewController,imgeNamed:String,title : String) {
         
         self.tabBar.tintColor = UIColor.orangeColor()
-//     设置标题
+//     同时设置tabBar和导航栏标题
         childController.title = title
 //        设置图片
         childController.tabBarItem.selectedImage = UIImage(named: "\(imgeNamed)_selected")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
         childController.tabBarItem.image = UIImage(named: imgeNamed)?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
-        
-        
         
         addChildViewController(UINavigationController(rootViewController: childController))
         
