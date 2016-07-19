@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SCProfileViewController: UIViewController {
+class SCProfileViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

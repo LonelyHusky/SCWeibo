@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SCMessageViewController: UIViewController {
+class SCMessageViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

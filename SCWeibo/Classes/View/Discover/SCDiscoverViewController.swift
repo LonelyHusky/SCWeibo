@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SCDiscoverViewController: UIViewController {
+class SCDiscoverViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
