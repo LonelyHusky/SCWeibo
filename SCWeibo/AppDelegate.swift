@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.backgroundColor = UIColor.whiteColor()
         self.window?.rootViewController = SCMainViewController()
         self.window?.makeKeyAndVisible()
-         
+         setupAppStyle()
         return true
     }
 

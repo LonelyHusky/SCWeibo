@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5250CEBA1D424ED3005B47C3 /* SCDiscoverSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250CEB91D424ED3005B47C3 /* SCDiscoverSearchView.swift */; };
+		5250CEBD1D42662B005B47C3 /* SCOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250CEBC1D42662B005B47C3 /* SCOAuthViewController.swift */; };
 		527DDDF41D3E372900D90218 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527DDDF31D3E372900D90218 /* AppDelegate.swift */; };
 		527DDDFB1D3E372900D90218 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 527DDDFA1D3E372900D90218 /* Assets.xcassets */; };
 		527DDDFE1D3E372900D90218 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 527DDDFC1D3E372900D90218 /* LaunchScreen.storyboard */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5250CEB91D424ED3005B47C3 /* SCDiscoverSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCDiscoverSearchView.swift; sourceTree = "<group>"; };
+		5250CEBC1D42662B005B47C3 /* SCOAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCOAuthViewController.swift; sourceTree = "<group>"; };
 		527DDDF01D3E372900D90218 /* SCWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		527DDDF31D3E372900D90218 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		527DDDFA1D3E372900D90218 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +60,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5250CEB81D424EB5005B47C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5250CEB91D424ED3005B47C3 /* SCDiscoverSearchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5250CEBB1D42660A005B47C3 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				5250CEBC1D42662B005B47C3 /* SCOAuthViewController.swift */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
 		527DDDE71D3E372900D90218 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +144,7 @@
 		52C6AA831D3E3D4600276046 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5250CEBB1D42660A005B47C3 /* OAuth */,
 				52C6AA861D3E3D4600276046 /* Main */,
 				52C6AA851D3E3D4600276046 /* Home */,
 				52C6AA841D3E3D4600276046 /* Discover */,
@@ -136,6 +157,7 @@
 		52C6AA841D3E3D4600276046 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				5250CEB81D424EB5005B47C3 /* View */,
 				52C6AA8E1D3E491900276046 /* SCDiscoverViewController.swift */,
 			);
 			path = Discover;
@@ -342,6 +364,7 @@
 				52C6AA931D3E492B00276046 /* SCProfileViewController.swift in Sources */,
 				527DDDF41D3E372900D90218 /* AppDelegate.swift in Sources */,
 				52FE83241D3EA4DC00794147 /* Extension+UIBarButtonItem.swift in Sources */,
+				5250CEBD1D42662B005B47C3 /* SCOAuthViewController.swift in Sources */,
 				52FE83201D3E92D900794147 /* SCVisitorView.swift in Sources */,
 				52C6AA8F1D3E491900276046 /* SCDiscoverViewController.swift in Sources */,
 				52C6AA8B1D3E3E9700276046 /* SCMainViewController.swift in Sources */,
@@ -350,6 +373,7 @@
 				52FE83251D3EA4DC00794147 /* SCBarButtonItem.swift in Sources */,
 				52C6AA8D1D3E490D00276046 /* SCHomeViewController.swift in Sources */,
 				52C6AA911D3E492200276046 /* SCMessageViewController.swift in Sources */,
+				5250CEBA1D424ED3005B47C3 /* SCDiscoverSearchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

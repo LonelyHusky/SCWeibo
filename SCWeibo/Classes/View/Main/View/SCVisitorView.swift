@@ -136,6 +136,7 @@ class SCVisitorView: UIView {
     // 注册
     private lazy var regButton: UIButton = {
         let button = UIButton()
+        
         // 添加点击时间
         button.addTarget(self, action: #selector(SCVisitorView.loginButtonClick), forControlEvents: UIControlEvents.TouchUpInside)
         button.setTitle("注册", forState: UIControlState.Normal)

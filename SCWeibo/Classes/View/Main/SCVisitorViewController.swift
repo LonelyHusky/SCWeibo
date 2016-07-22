@@ -17,7 +17,8 @@ class SCVisitorViewController: UIViewController {
     
     // MARK: - 监听方法
     @objc private func loginClick(){
-        print("登录或者注册按钮点击")
+        let vc = SCOAuthViewController()
+        self.presentViewController(UINavigationController.init(rootViewController: vc), animated: true, completion: nil)
     }
     
     override func loadView() {
@@ -28,7 +29,8 @@ class SCVisitorViewController: UIViewController {
     func setupVisitorView(){
         visitorView = SCVisitorView()
         visitorView?.closure = {
-            print("登录或者注册按钮点击")
+            let vc = SCOAuthViewController()
+            self.presentViewController(UINavigationController.init(rootViewController: vc), animated: true, completion: nil)
         }
         view = visitorView
         setupNav()
