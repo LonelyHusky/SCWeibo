@@ -102,8 +102,10 @@ extension SCOAuthViewController:UIWebViewDelegate{
 //                        切换控制器
                         self.dismissViewControllerAnimated(false, completion: { () -> Void in
 //                            当前界面关闭完成之后，跳转到欢迎页面
-                          let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
-                            appDelegate?.window?.rootViewController = SCWeiIconViewController()
+//                          let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
+//                            appDelegate?.window?.rootViewController = SCWeiIconViewController()
+
+                            NSNotificationCenter.defaultCenter().postNotificationName(SCChangeRootVCNotification, object: self)
                             
                         })
                     }else{

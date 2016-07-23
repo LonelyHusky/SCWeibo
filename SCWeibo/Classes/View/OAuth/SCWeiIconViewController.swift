@@ -65,8 +65,10 @@ class SCWeiIconViewController: UIViewController {
                 self.messageLabel.alpha = 1
                 }, completion: { (_) -> Void in
 //                    动画完毕，关闭当前控制器，切换根控制器
-                    let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
-                    appDelegate?.window?.rootViewController = SCMainViewController()
+//                    let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
+//                    appDelegate?.window?.rootViewController = SCMainViewController()
+                    NSNotificationCenter.defaultCenter().postNotificationName(SCChangeRootVCNotification, object: nil)
+            
             })
         }
     }
@@ -98,7 +100,7 @@ class SCWeiIconViewController: UIViewController {
     private lazy var messageLabel:UILabel = {
 
         let messageLabel = UILabel()
-        messageLabel.textColor = UIColor .orangeColor()
+        messageLabel.textColor = UIColor .grayColor()
         messageLabel.text = "欢迎回来"
         messageLabel.font = UIFont.systemFontOfSize(14)
         messageLabel.alpha = 0

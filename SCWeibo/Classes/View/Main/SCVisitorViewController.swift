@@ -49,7 +49,7 @@ class SCVisitorViewController: UIViewController {
     
 }
     
-    func setupUI(){
+    private func setupUI(){
         
     }
     // MARK: -  懒加载控件

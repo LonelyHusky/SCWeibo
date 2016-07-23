@@ -16,22 +16,59 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.changeRootVC(_:)), name: SCChangeRootVCNotification, object: nil)
+        
         self.window = UIWindow(frame:UIScreen.mainScreen().bounds)
         self.window?.backgroundColor = UIColor.whiteColor()
 //        2.设置根控制器。 是否登录，如果没有登录 就进mainVc。登录啦 就进 weiVC
 //        self.window?.rootViewController = SCMainViewController()
         window?.rootViewController = SCUserAccountModel.sharedMOdel.isLogin ? SCWeiIconViewController() : SCMainViewController()
         
+        
         self.window?.makeKeyAndVisible()
+        
+        
+        
+        
+        
+        
          setupAppStyle()
+        
+        
+        
+        
         return true
     }
 
+    func changeRootVC(noti:NSNotification) {
+        
+        if noti.object != nil {
+            window?.rootViewController = SCWeiIconViewController()
+
+        }else{
+            window?.rootViewController = SCMainViewController()
+            
+        }
+        
+    }
+    
+    
     func setupAppStyle(){
         // 设置tintColor 设置控件颜色 （全局使用, 必须在我们项目初始化之前设置）
         // UITabBar.appearance().tintColor = UIColor.orangeColor()
         UINavigationBar.appearance().tintColor = UIColor.orangeColor()
     }
+
+    //移除所以通知
+    
+    deinit {
+        
+    NSNotificationCenter.defaultCenter().removeObserver(self)
+        
+    }
+    
+    
     
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
