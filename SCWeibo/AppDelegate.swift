@@ -18,7 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame:UIScreen.mainScreen().bounds)
         self.window?.backgroundColor = UIColor.whiteColor()
-        self.window?.rootViewController = SCMainViewController()
+//        2.设置根控制器。 是否登录，如果没有登录 就进mainVc。登录啦 就进 weiVC
+//        self.window?.rootViewController = SCMainViewController()
+        window?.rootViewController = SCUserAccountModel.sharedMOdel.isLogin ? SCWeiIconViewController() : SCMainViewController()
+        
         self.window?.makeKeyAndVisible()
          setupAppStyle()
         return true

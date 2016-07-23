@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import SVProgressHUD
 let appKEY = "958425496"
 let appUrl = "http://www.baidu.com"
-
+let appSecret = "a9bbb89c19b61a8426aeb04b376f8fa0"
 
 class SCOAuthViewController: UIViewController {
 
@@ -53,6 +54,10 @@ class SCOAuthViewController: UIViewController {
     
    @objc private func autoFill(){
     
+    let jsStr = "document.getElementById('userId').value='silen_sc@sina.cn';document.getElementById('passwd').value='shuchao1020'"
+    
+    webView.stringByEvaluatingJavaScriptFromString(jsStr)
+    
     
     }
     
@@ -60,8 +65,100 @@ class SCOAuthViewController: UIViewController {
     private lazy  var webView : UIWebView  = {
     
         let webView = UIWebView()
+        webView.delegate = self
+        
         return webView
   
     }()
-    
+ 
 }
+
+extension SCOAuthViewController:UIWebViewDelegate{
+    /*
+     监听webView 将要加载的request
+     - 其有返回值
+     - 如果返回为true 代表继续加载
+     - 如果返回为false 带包要停止加载
+     - 默认如果不实现该方法 默认为true
+     
+     */
+    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+//        取到请求里面的url
+        guard let url = request.URL else{
+            return false
+        }
+//        判断url的地址是否以回调页开头
+        if url.absoluteString.hasPrefix(appUrl){
+//        代表是以回调也开头
+//            containsString：是否包含某个字符串
+            if let q = url.query where q.containsString("code="){
+//                截取授权码
+                 let code = q.substringFromIndex("code=".endIndex)
+                print(code)
+//                通过code获取accessToken
+                SCUserAccountModel.sharedMOdel.loadAccessToken(code, finished: { (isSuccess) in
+                    if isSuccess{
+//                    关闭当前界面
+//                        切换控制器
+                        self.dismissViewControllerAnimated(false, completion: { () -> Void in
+//                            当前界面关闭完成之后，跳转到欢迎页面
+                          let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
+                            appDelegate?.window?.rootViewController = SCWeiIconViewController()
+                            
+                        })
+                    }else{
+                    
+//                        给提示，登入失败
+                    }
+                })
+                
+            }
+            
+        return false
+            
+        }
+ 
+        return true
+    }
+    
+    
+    
+    
+    
+    func webViewDidStartLoad(webView: UIWebView) {
+        SVProgressHUD.show()
+    }
+    
+    func webViewDidFinishLoad(webView: UIWebView) {
+        SVProgressHUD.dismiss()
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

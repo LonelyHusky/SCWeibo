@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5250CEBA1D424ED3005B47C3 /* SCDiscoverSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250CEB91D424ED3005B47C3 /* SCDiscoverSearchView.swift */; };
 		5250CEBD1D42662B005B47C3 /* SCOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250CEBC1D42662B005B47C3 /* SCOAuthViewController.swift */; };
+		5255D8921D428C7500DA709B /* SCNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255D8911D428C7500DA709B /* SCNetworkTools.swift */; };
+		5255D8941D4294E400DA709B /* SCUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255D8931D4294E400DA709B /* SCUserAccount.swift */; };
 		527DDDF41D3E372900D90218 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527DDDF31D3E372900D90218 /* AppDelegate.swift */; };
 		527DDDFB1D3E372900D90218 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 527DDDFA1D3E372900D90218 /* Assets.xcassets */; };
 		527DDDFE1D3E372900D90218 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 527DDDFC1D3E372900D90218 /* LaunchScreen.storyboard */; };
@@ -17,6 +19,8 @@
 		52C6AA8F1D3E491900276046 /* SCDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6AA8E1D3E491900276046 /* SCDiscoverViewController.swift */; };
 		52C6AA911D3E492200276046 /* SCMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6AA901D3E492200276046 /* SCMessageViewController.swift */; };
 		52C6AA931D3E492B00276046 /* SCProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6AA921D3E492B00276046 /* SCProfileViewController.swift */; };
+		52DAB2F61D42FBC80065C6F7 /* SCUserAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DAB2F51D42FBC80065C6F7 /* SCUserAccountModel.swift */; };
+		52DAB2F81D43466A0065C6F7 /* SCWeiIconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DAB2F71D43466A0065C6F7 /* SCWeiIconViewController.swift */; };
 		52FE831B1D3E91FA00794147 /* SCVisitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FE831A1D3E91FA00794147 /* SCVisitorViewController.swift */; };
 		52FE831E1D3E92AE00794147 /* SCTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FE831D1D3E92AE00794147 /* SCTabBar.swift */; };
 		52FE83201D3E92D900794147 /* SCVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FE831F1D3E92D900794147 /* SCVisitorView.swift */; };
@@ -28,6 +32,8 @@
 /* Begin PBXFileReference section */
 		5250CEB91D424ED3005B47C3 /* SCDiscoverSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCDiscoverSearchView.swift; sourceTree = "<group>"; };
 		5250CEBC1D42662B005B47C3 /* SCOAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCOAuthViewController.swift; sourceTree = "<group>"; };
+		5255D8911D428C7500DA709B /* SCNetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNetworkTools.swift; sourceTree = "<group>"; };
+		5255D8931D4294E400DA709B /* SCUserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCUserAccount.swift; sourceTree = "<group>"; };
 		527DDDF01D3E372900D90218 /* SCWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		527DDDF31D3E372900D90218 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		527DDDFA1D3E372900D90218 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +44,8 @@
 		52C6AA8E1D3E491900276046 /* SCDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCDiscoverViewController.swift; sourceTree = "<group>"; };
 		52C6AA901D3E492200276046 /* SCMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCMessageViewController.swift; sourceTree = "<group>"; };
 		52C6AA921D3E492B00276046 /* SCProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCProfileViewController.swift; sourceTree = "<group>"; };
+		52DAB2F51D42FBC80065C6F7 /* SCUserAccountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCUserAccountModel.swift; sourceTree = "<group>"; };
+		52DAB2F71D43466A0065C6F7 /* SCWeiIconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCWeiIconViewController.swift; sourceTree = "<group>"; };
 		52FE831A1D3E91FA00794147 /* SCVisitorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCVisitorViewController.swift; sourceTree = "<group>"; };
 		52FE831D1D3E92AE00794147 /* SCTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCTabBar.swift; sourceTree = "<group>"; };
 		52FE831F1D3E92D900794147 /* SCVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCVisitorView.swift; sourceTree = "<group>"; };
@@ -72,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				5250CEBC1D42662B005B47C3 /* SCOAuthViewController.swift */,
+				52DAB2F71D43466A0065C6F7 /* SCWeiIconViewController.swift */,
 			);
 			path = OAuth;
 			sourceTree = "<group>";
@@ -128,6 +137,7 @@
 		52C6AA811D3E3D4600276046 /* Modle */ = {
 			isa = PBXGroup;
 			children = (
+				5255D8931D4294E400DA709B /* SCUserAccount.swift */,
 			);
 			path = Modle;
 			sourceTree = "<group>";
@@ -137,6 +147,7 @@
 			children = (
 				52FE83211D3EA4DC00794147 /* Extension */,
 				52FE83231D3EA4DC00794147 /* SCBarButtonItem.swift */,
+				5255D8911D428C7500DA709B /* SCNetworkTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -200,6 +211,7 @@
 		52C6AA891D3E3D4600276046 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				52DAB2F51D42FBC80065C6F7 /* SCUserAccountModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -363,14 +375,18 @@
 			files = (
 				52C6AA931D3E492B00276046 /* SCProfileViewController.swift in Sources */,
 				527DDDF41D3E372900D90218 /* AppDelegate.swift in Sources */,
+				5255D8921D428C7500DA709B /* SCNetworkTools.swift in Sources */,
 				52FE83241D3EA4DC00794147 /* Extension+UIBarButtonItem.swift in Sources */,
 				5250CEBD1D42662B005B47C3 /* SCOAuthViewController.swift in Sources */,
 				52FE83201D3E92D900794147 /* SCVisitorView.swift in Sources */,
+				52DAB2F61D42FBC80065C6F7 /* SCUserAccountModel.swift in Sources */,
 				52C6AA8F1D3E491900276046 /* SCDiscoverViewController.swift in Sources */,
 				52C6AA8B1D3E3E9700276046 /* SCMainViewController.swift in Sources */,
 				52FE831B1D3E91FA00794147 /* SCVisitorViewController.swift in Sources */,
 				52FE831E1D3E92AE00794147 /* SCTabBar.swift in Sources */,
+				52DAB2F81D43466A0065C6F7 /* SCWeiIconViewController.swift in Sources */,
 				52FE83251D3EA4DC00794147 /* SCBarButtonItem.swift in Sources */,
+				5255D8941D4294E400DA709B /* SCUserAccount.swift in Sources */,
 				52C6AA8D1D3E490D00276046 /* SCHomeViewController.swift in Sources */,
 				52C6AA911D3E492200276046 /* SCMessageViewController.swift in Sources */,
 				5250CEBA1D424ED3005B47C3 /* SCDiscoverSearchView.swift in Sources */,

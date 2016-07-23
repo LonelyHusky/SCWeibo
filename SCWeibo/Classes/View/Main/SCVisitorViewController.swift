@@ -11,7 +11,7 @@ import UIKit
 
 class SCVisitorViewController: UIViewController {
    
-    var isLogin : Bool = false
+    var isLogin : Bool = SCUserAccountModel.sharedMOdel.isLogin
     
     var visitorView : SCVisitorView?
     
