@@ -22,6 +22,8 @@ class SCStatusViewModel: NSObject {
                     retweetText = "@\(name):\(content)"
                 }
             }
+            retweetPictureViewSize = calcPictureViewSize(status?.retweeted_status?.pic_urls)
+            originalPictureViewSize = calcPictureViewSize(status?.pic_urls)
         }
     
     }
@@ -31,6 +33,31 @@ class SCStatusViewModel: NSObject {
     var retweetText : String?
 //    来源字符串
     var sourcrText : String?
+//    转发微博的配图视图大小
+    var retweetPictureViewSize :CGSize = CGSizeZero
+    var originalPictureViewSize:CGSize = CGSizeZero
+    
+    private func calcPictureViewSize(pic_urls:[SCStatusPhontoInfo]?) -> CGSize{
+//    获取图片数量
+        let count = pic_urls?.count ?? 0
+        
+        if count == 0 {
+            return CGSizeZero
+        }
+//        根据count计算大小
+//        求出几行几列
+        let col = count == 4 ?  2 : (count > 3 ? 3 : count)
+        let row = ((count - 1) / 3) + 1
+        
+//        计算图片大小
+        let margin : CGFloat = 5
+        let itemWH = (SCReenW - 2 * SCStatusCellMargin - 2 * margin) / 3
+//        通过每张图片大小和列数求出宽度，行数求出高度
+        let w = CGFloat(col) * itemWH + CGFloat(col - 1) * margin
+        let h = CGFloat(row) * itemWH + CGFloat(row - 1) * margin
+
+        return CGSize(width: w, height: h)
+    }
     
     
     private func dealSourceText(){

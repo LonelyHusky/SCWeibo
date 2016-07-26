@@ -19,7 +19,7 @@ class SCHomeViewController: SCVisitorViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        是否登录
         if !isLogin {
             visitorView?.setupVisitorViewInfo(nil, title: nil)
             return
@@ -74,6 +74,7 @@ extension SCHomeViewController:UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCellWithIdentifier(SCStatusID, forIndexPath: indexPath) as! SCStatusCell
         
+//        print( statusListViewModel.statusArray[indexPath.row])
         //        给cell附值
         cell.statusViewModel = statusListViewModel.statusArray[indexPath.row]
         return cell

@@ -82,7 +82,7 @@ class SCUserAccountModel: NSObject {
                 finished(isSuccess: false)
                 return
             }
-            print("请求成功:\(responseObject)")
+//            print("请求成功:\(responseObject)")
             
             //            如果as是写在if let 或者 guard 里面 ，都是使用as？
             guard let dict = responseObject as? [String: AnyObject] else {
@@ -94,7 +94,7 @@ class SCUserAccountModel: NSObject {
             
             let account = SCUserAccount(dict:dict)
             
-            print(account)
+//            print(account)
             
             //            获取个人信息
             self.loadUserInfo(account,finished: finished)
@@ -130,8 +130,8 @@ class SCUserAccountModel: NSObject {
             //            如果等于前面可选值的话就用as? 如果是必选值。就用as！
             accout.name = dict["name"] as? String
             accout.avatar_large = dict["avatar_large"] as? String
-            print(accout)
-            self.account = accout 
+//            print(accout)
+            self.account = accout
             self.saveAccount(accout)
             //            保存登录信息
             finished(isSuccess: true)
@@ -143,7 +143,7 @@ class SCUserAccountModel: NSObject {
     private func saveAccount(account:SCUserAccount){
         
         let path = (NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).last! as NSString).stringByAppendingPathComponent("accout.archive")
-        print(path)
+//        print(path)
         NSKeyedArchiver.archiveRootObject(account, toFile: path)
         
         
@@ -152,7 +152,7 @@ class SCUserAccountModel: NSObject {
     private func accountInSanbox() ->SCUserAccount?{
         let path = (NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).last! as NSString).stringByAppendingPathComponent("accout.archive")
         let result = NSKeyedUnarchiver.unarchiveObjectWithFile(path)as? SCUserAccount
-        print(result)
+//        print(result)
         return result
         
         

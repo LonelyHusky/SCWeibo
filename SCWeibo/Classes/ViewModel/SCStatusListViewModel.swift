@@ -35,7 +35,7 @@ class SCStatusListViewModel: NSObject {
                 return
             }
             
-            print("response = \(response)")
+//            print("response = \(response)")
             //1.取出status 对应节点的数据
             guard let dicts = response["statuses"] as? [[String:AnyObject]] else {
                
@@ -56,8 +56,11 @@ class SCStatusListViewModel: NSObject {
             }
             self.statusArray = tempArray
             finished(isSuccess:true)
-
+            
+            
+//            self.cachSingleImage()
         }
     }
 
+    
 }

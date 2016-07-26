@@ -20,7 +20,8 @@ class SCStatus: NSObject {
     var user :SCUser?
 //    当前微博的转发微博
     var retweeted_status :SCStatus?
-    
+//    配图数组
+    var pic_urls : [SCStatusPhontoInfo]?
     
     
 //    添加字典转模型的构造函数
@@ -42,6 +43,22 @@ class SCStatus: NSObject {
                 return
             }
             retweeted_status = SCStatus(dict: dict)
+            
+        }else if key == "pic_urls" {
+//            缩略配图
+            guard let dicts = value as? [[String: AnyObject]] else{
+                return
+            }
+            
+            var tempArray = [SCStatusPhontoInfo]()
+            
+            for dict in dicts {
+                let info = SCStatusPhontoInfo(dict: dict)
+                tempArray.append(info)
+            }
+            
+            pic_urls = tempArray  
+            
         }else{
             super.setValue(value, forKey: key)
         }

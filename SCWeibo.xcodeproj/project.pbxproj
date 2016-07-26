@@ -10,6 +10,8 @@
 		5206010D1D43CC7A00AB7BA1 /* SCUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5206010C1D43CC7A00AB7BA1 /* SCUser.swift */; };
 		520DB99E1D43E74D00DB7A53 /* SCStatusToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520DB99D1D43E74D00DB7A53 /* SCStatusToolBar.swift */; };
 		520DB9A01D43FBAA00DB7A53 /* SCRetweetStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520DB99F1D43FBAA00DB7A53 /* SCRetweetStatusView.swift */; };
+		521959921D45F73600DB869D /* SCStatusPhontoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521959911D45F73600DB869D /* SCStatusPhontoInfo.swift */; };
+		521959941D460ECE00DB869D /* SCStatusPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521959931D460ECE00DB869D /* SCStatusPictureView.swift */; };
 		5250CEBA1D424ED3005B47C3 /* SCDiscoverSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250CEB91D424ED3005B47C3 /* SCDiscoverSearchView.swift */; };
 		5250CEBD1D42662B005B47C3 /* SCOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250CEBC1D42662B005B47C3 /* SCOAuthViewController.swift */; };
 		5255D8921D428C7500DA709B /* SCNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255D8911D428C7500DA709B /* SCNetworkTools.swift */; };
@@ -42,6 +44,8 @@
 		5206010C1D43CC7A00AB7BA1 /* SCUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCUser.swift; sourceTree = "<group>"; };
 		520DB99D1D43E74D00DB7A53 /* SCStatusToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCStatusToolBar.swift; sourceTree = "<group>"; };
 		520DB99F1D43FBAA00DB7A53 /* SCRetweetStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCRetweetStatusView.swift; sourceTree = "<group>"; };
+		521959911D45F73600DB869D /* SCStatusPhontoInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCStatusPhontoInfo.swift; sourceTree = "<group>"; };
+		521959931D460ECE00DB869D /* SCStatusPictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCStatusPictureView.swift; sourceTree = "<group>"; };
 		5250CEB91D424ED3005B47C3 /* SCDiscoverSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCDiscoverSearchView.swift; sourceTree = "<group>"; };
 		5250CEBC1D42662B005B47C3 /* SCOAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCOAuthViewController.swift; sourceTree = "<group>"; };
 		5255D8911D428C7500DA709B /* SCNetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNetworkTools.swift; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 				52BA8AC81D43BA9A000AE45F /* SCOriginalStatusView.swift */,
 				520DB99D1D43E74D00DB7A53 /* SCStatusToolBar.swift */,
 				520DB99F1D43FBAA00DB7A53 /* SCRetweetStatusView.swift */,
+				521959931D460ECE00DB869D /* SCStatusPictureView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 				5255D8931D4294E400DA709B /* SCUserAccount.swift */,
 				52D997C41D438A1400B8E90F /* SCStatus.swift */,
 				5206010C1D43CC7A00AB7BA1 /* SCUser.swift */,
+				521959911D45F73600DB869D /* SCStatusPhontoInfo.swift */,
 			);
 			path = Modle;
 			sourceTree = "<group>";
@@ -425,8 +431,10 @@
 				52C6AA8F1D3E491900276046 /* SCDiscoverViewController.swift in Sources */,
 				52C6AA8B1D3E3E9700276046 /* SCMainViewController.swift in Sources */,
 				52FE831B1D3E91FA00794147 /* SCVisitorViewController.swift in Sources */,
+				521959941D460ECE00DB869D /* SCStatusPictureView.swift in Sources */,
 				52FE831E1D3E92AE00794147 /* SCTabBar.swift in Sources */,
 				52E777C21D43D3D400089D72 /* SCStatusViewModel.swift in Sources */,
+				521959921D45F73600DB869D /* SCStatusPhontoInfo.swift in Sources */,
 				52D997C51D438A1400B8E90F /* SCStatus.swift in Sources */,
 				52DAB2F81D43466A0065C6F7 /* SCWeiIconViewController.swift in Sources */,
 				52FE83251D3EA4DC00794147 /* SCBarButtonItem.swift in Sources */,

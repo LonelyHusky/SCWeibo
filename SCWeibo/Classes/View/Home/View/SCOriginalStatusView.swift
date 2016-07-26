@@ -7,8 +7,12 @@
 //
 
 import UIKit
-
+import SnapKit
 class SCOriginalStatusView: UIView {
+    
+    //    当前控件的底部约束
+    var buttomCons : Constraint?
+    
     
     var statusViewModel :SCStatusViewModel?{
         didSet{
@@ -25,6 +29,37 @@ class SCOriginalStatusView: UIView {
             
 //            内容
             contentLabel.text = statusViewModel?.status?.text
+            
+            
+            
+
+////              卸载约束
+            buttomCons?.uninstall()
+            
+    //            配图数据
+            if let pic_url = statusViewModel?.status?.pic_urls where pic_url.count > 0{
+//                设置数据
+                pictureView.pic_urls = pic_url
+                pictureView.snp_updateConstraints(closure: { (make) in
+                    make.size.equalTo(statusViewModel?.originalPictureViewSize ?? CGSizeZero)
+                })
+                
+                
+//            显示控件
+                pictureView.hidden = false
+//                更新约束
+                self.snp_makeConstraints(closure: { (make) in
+                 buttomCons =  make.bottom.equalTo(pictureView).offset(SCStatusCellMargin).constraint
+                })
+            
+            }else{
+                pictureView.hidden = true
+                self.snp_makeConstraints(closure: { (make) in
+                   buttomCons = make.bottom.equalTo(contentLabel).offset(SCStatusCellMargin).constraint
+                })
+            
+            }
+            
             
         }
     
@@ -52,6 +87,7 @@ class SCOriginalStatusView: UIView {
         addSubview(sourceLabel)
         addSubview(verifiedImageView)
         addSubview(contentLabel)
+        addSubview(pictureView)
         
 //        添加约束
 //        头像
@@ -91,10 +127,20 @@ class SCOriginalStatusView: UIView {
             make.leading.equalTo(headImage)
             make.top.equalTo(headImage.snp_bottom).offset(SCStatusCellMargin)
         }
+//        配图
+        pictureView.snp_makeConstraints { (make) in
+            make.leading.equalTo(contentLabel)
+            make.top.equalTo(contentLabel.snp_bottom).offset(SCStatusCellMargin )
+            make.size.equalTo(CGSize(width: 100, height: 100))
+        }
+        
+        
         
         self.snp_makeConstraints { (make) in
-            make.bottom.equalTo(contentLabel.snp_bottom).offset(SCStatusCellMargin)
+          buttomCons =  make.bottom.equalTo(pictureView.snp_bottom).offset(SCStatusCellMargin).constraint
         }
+        
+        
 
     }
     
@@ -142,6 +188,10 @@ class SCOriginalStatusView: UIView {
         
         return label
     }()
+    
+//    配图视图
+    private lazy var pictureView :SCStatusPictureView = SCStatusPictureView(frame: CGRectZero, collectionViewLayout: UICollectionViewFlowLayout())
+
 }
 
 
